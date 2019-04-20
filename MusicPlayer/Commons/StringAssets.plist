@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>accessCode</key>
+	<string>csn22052018</string>
+	<key>musicInfoUrl</key>
+	<string>http://old.chiasenhac.vn</string>
+	<key>searchUrl</key>
+	<string>http://search.chiasenhac.vn</string>
+</dict>
+</plist>
