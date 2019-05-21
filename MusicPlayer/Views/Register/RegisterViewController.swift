@@ -1,18 +1,14 @@
 //
-//  PlayerViewController.swift
+//  RegisterViewController.swift
 //  MusicPlayer
 //
-//  Created by Trần Thành Phương Đăng on 20/04/19.
+//  Created by Trần Thành Phương Đăng on 19/05/19.
 //  Copyright © 2019 phuongdang. All rights reserved.
 //
 
 import UIKit
 
-protocol PlayerViewConrollerDelegate {
-  func startMusic(url: String);
-  func pauseMusic;
-}
-class PlayerViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

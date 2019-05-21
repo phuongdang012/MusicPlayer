@@ -7,29 +7,9 @@
 //
 
 import Foundation;
-import ObjectMapper;
-import Moya_ObjectMapper;
+import Mapper;
 
 class Music: Mappable{
-  required convenience init?(map: Map) {
-    self.init();
-  }
-  
-  func mapping(map: Map) {
-    id <- map["music_id"];
-    titleUrl <- map["music_title_url"];
-    title <- map["music_title"];
-    artistName <- map["music_artist"];
-    composer <- map["music_composer"];
-    albumName <- map["music_album"];
-    productionCompany <- map["music_production"];
-    imgPath <- map["music_img"];
-    url128 <- map["file_url"];
-    url320 <- map["file_320_url"];
-    url500 <- map["file_m4a_url"];
-    urlLossless <- map["file_lossless_url"];
-  }
-  
   var id: String?;
   var titleUrl: String?;
   var title: String?;
@@ -42,4 +22,27 @@ class Music: Mappable{
   var url320: String?;
   var url500: String?;
   var urlLossless: String?;
+  var coverPath: String?;
+  var thumbnailPath: String?;
+  var previewPath: String?;
+  var artistImg: String?;
+  
+  required init(map: Mapper) throws {
+    id = map.optionalFrom("music_id");
+    titleUrl = map.optionalFrom("music_title_url");
+    title = map.optionalFrom("music_title");
+    artistName = map.optionalFrom("music_artist");
+    composer = map.optionalFrom("music_composer");
+    albumName = map.optionalFrom("music_album");
+    productionCompany = map.optionalFrom("music_production");
+    imgPath = map.optionalFrom("music_img");
+    url128 = map.optionalFrom("file_url");
+    url320 = map.optionalFrom("file_320_url");
+    url500 = map.optionalFrom("file_m4a_url");
+    urlLossless = map.optionalFrom("file_lossless_url");
+    coverPath = map.optionalFrom("cover_img");
+    thumbnailPath = map.optionalFrom("thumbnail");
+    previewPath = map.optionalFrom("preview");
+    artistImg = map.optionalFrom("artist_face_url");
+  }
 }
